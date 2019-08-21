@@ -1,8 +1,8 @@
-package com.gildedrose;
+package com.gildedrose.updater;
 
-class SulfurasUpdater extends LegendaryItemUpdater {
+public class SulfurasUpdater extends LegendaryItemUpdater {
 
-    SulfurasUpdater() {}
+    public SulfurasUpdater() {}
 
     @Override
     void updateSellIn() {

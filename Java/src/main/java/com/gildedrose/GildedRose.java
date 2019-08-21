@@ -1,5 +1,8 @@
 package com.gildedrose;
 
+import com.gildedrose.updater.ItemUpdater;
+import com.gildedrose.updater.ItemUpdaterFactory;
+
 class GildedRose {
     Item[] items;
 
@@ -11,6 +14,7 @@ class GildedRose {
         for (Item item : items) {
             ItemUpdaterFactory.getItemUpdater(item)
                     .updateStateFor();
+
         }
     }
 }

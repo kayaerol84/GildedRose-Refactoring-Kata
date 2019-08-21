@@ -1,10 +1,12 @@
-package com.gildedrose;
+package com.gildedrose.updater;
+
+import com.gildedrose.Item;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
-class ItemUpdaterFactory {
+public class ItemUpdaterFactory {
 
     private static final Map<String, ItemUpdater> registeredItemUpdaters = new HashMap<>();
 
@@ -15,11 +17,11 @@ class ItemUpdaterFactory {
         registeredItemUpdaters.put("Conjured Mana Cake", new ConjuredUpdater());
     }
 
-    static void registerCustomUpdater(final String type, final ItemUpdater updater){
+    public static void registerCustomUpdater(final String type, final ItemUpdater updater){
         registeredItemUpdaters.put(type, updater);
     }
 
-    static ItemUpdater getItemUpdater(final Item item) {
+    public static ItemUpdater getItemUpdater(final Item item) {
         ItemUpdater itemUpdater = Optional.ofNullable(registeredItemUpdaters.get(item.name))
                 .orElse(new StandardItemUpdater());
         itemUpdater.setItem(item);

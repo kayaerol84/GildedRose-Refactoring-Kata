@@ -1,8 +1,10 @@
-package com.gildedrose;
+package com.gildedrose.updater;
 
-abstract class ItemUpdater {
-    static int HIGHEST_QUALITY = 50;
-    static int MIN_QUALITY = 0;
+import com.gildedrose.Item;
+
+public abstract class ItemUpdater {
+    public static int HIGHEST_QUALITY = 50;
+    public static int MIN_QUALITY = 0;
     static int DEGRADE_NORMAL = -1;
     static int DEGRADE_TWICE_AS_FAST = -2;
     static int INCREASE_NORMAL = 1;
@@ -10,23 +12,23 @@ abstract class ItemUpdater {
     static int INCREASE_THRICE_AS_FAST = 3;
 
     Item item;
-
     ItemUpdater() {}
 
-    void updateStateFor(){
+    public void updateStateFor(){
         updateSellIn();
         updateQuality();
     }
+
+    abstract void updateSellIn();
+    abstract boolean canUpdateQuality();
+    abstract int getUpdateValue();
+    abstract int getNewQuality();
 
     private void updateQuality() {
         if (canUpdateQuality()) {
             item.quality = Math.max(getNewQuality(), MIN_QUALITY);
         }
     }
-    abstract void updateSellIn();
-    abstract boolean canUpdateQuality();
-    abstract int getUpdateValue();
-    abstract int getNewQuality();
 
     public void setItem(Item item) {
         this.item = item;

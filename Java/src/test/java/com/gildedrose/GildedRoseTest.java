@@ -1,5 +1,7 @@
 package com.gildedrose;
 
+import com.gildedrose.updater.ItemUpdaterFactory;
+import com.gildedrose.updater.StandardItemUpdater;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -7,8 +9,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import static com.gildedrose.ItemUpdater.HIGHEST_QUALITY;
-import static com.gildedrose.ItemUpdater.MIN_QUALITY;
+import static com.gildedrose.updater.ItemUpdater.HIGHEST_QUALITY;
+import static com.gildedrose.updater.ItemUpdater.MIN_QUALITY;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 
@@ -16,15 +18,15 @@ public class GildedRoseTest {
 
     private final Item sulfuras = new Item("Sulfuras, Hand of Ragnaros", 0, 80);
 
-    private final Item standardWithHighestQuality = new Item("Standard", 5, HIGHEST_QUALITY);
-    private final Item agedBrieWithHighestQuality = new Item("Aged Brie", 5, HIGHEST_QUALITY);
-    private final Item conjuredWithHighestQuality = new Item("Conjured Mana Cake", 5, HIGHEST_QUALITY);
-    private final Item backstageWithHighestQuality = new Item("Backstage passes to a TAFKAL80ETC concert", 5, HIGHEST_QUALITY);
+    private final Item standardWithHighestQuality = MockItem.createHigQuality("Standard");
+    private final Item agedBrieWithHighestQuality = MockItem.createHigQuality("Aged Brie");
+    private final Item conjuredWithHighestQuality = MockItem.createHigQuality("Conjured Mana Cake");
+    private final Item backstageWithHighestQuality = MockItem.createHigQuality("Backstage passes to a TAFKAL80ETC concert");
 
-    private final Item standardWithLowQuality = new Item("Standard", 0, MIN_QUALITY + 1);
-    private final Item agedBrieWithLowQuality = new Item("Aged Brie", 0, MIN_QUALITY + 1);
-    private final Item conjuredWithLowQuality = new Item("Conjured Mana Cake", 0, MIN_QUALITY + 1);
-    private final Item backstageWithLowQuality = new Item("Backstage passes to a TAFKAL80ETC concert", 0, MIN_QUALITY + 1);
+    private final Item standardWithLowQuality = MockItem.createLowQuality("Standard");
+    private final Item agedBrieWithLowQuality = MockItem.createLowQuality("Aged Brie");
+    private final Item conjuredWithLowQuality = MockItem.createLowQuality("Conjured Mana Cake");
+    private final Item backstageWithLowQuality = MockItem.createLowQuality("Backstage passes to a TAFKAL80ETC concert");
 
     private GildedRose app;
 

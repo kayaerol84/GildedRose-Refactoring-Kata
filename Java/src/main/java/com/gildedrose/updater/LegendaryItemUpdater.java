@@ -1,9 +1,9 @@
-package com.gildedrose;
+package com.gildedrose.updater;
 
-abstract class LegendaryItemUpdater extends ItemUpdater{
+public abstract class LegendaryItemUpdater extends ItemUpdater{
     static int HIGHEST_QUALITY = 80;
 
-    LegendaryItemUpdater() {
+    public LegendaryItemUpdater() {
     }
 
     int getNewQuality(){

@@ -1,8 +1,8 @@
-package com.gildedrose;
+package com.gildedrose.updater;
 
-class BackstagePassUpdater extends CustomItemUpdater {
+public class BackstagePassUpdater extends CustomItemUpdater {
 
-    BackstagePassUpdater() {
+    public BackstagePassUpdater() {
     }
 
     @Override

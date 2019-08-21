@@ -1,8 +1,8 @@
-package com.gildedrose;
+package com.gildedrose.updater;
 
-class ConjuredUpdater extends StandardItemUpdater {
+public class ConjuredUpdater extends StandardItemUpdater {
 
-    ConjuredUpdater() {
+    public ConjuredUpdater() {
     }
 
     @Override

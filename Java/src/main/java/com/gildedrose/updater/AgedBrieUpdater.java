@@ -1,8 +1,8 @@
-package com.gildedrose;
+package com.gildedrose.updater;
 
-class AgedBrieUpdater extends CustomItemUpdater {
+public class AgedBrieUpdater extends CustomItemUpdater {
 
-    AgedBrieUpdater() {
+    public AgedBrieUpdater() {
     }
 
     @Override
