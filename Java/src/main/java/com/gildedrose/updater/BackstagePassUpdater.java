@@ -17,7 +17,7 @@ public class BackstagePassUpdater extends CustomItemUpdater {
 
     @Override
     int getUpdateValue() {
-        int sellIn = item.sellIn;
+        final int sellIn = item.sellIn;
         if (sellInLessThan(sellIn, 0)) {
             // if sell by date has passed then the quality should be zero
             return -item.quality;

@@ -18,10 +18,10 @@ public class GildedRoseTest {
 
     private final Item sulfuras = new Item("Sulfuras, Hand of Ragnaros", 0, 80);
 
-    private final Item standardWithHighestQuality = MockItem.createHigQuality("Standard");
-    private final Item agedBrieWithHighestQuality = MockItem.createHigQuality("Aged Brie");
-    private final Item conjuredWithHighestQuality = MockItem.createHigQuality("Conjured Mana Cake");
-    private final Item backstageWithHighestQuality = MockItem.createHigQuality("Backstage passes to a TAFKAL80ETC concert");
+    private final Item standardWithHighestQuality = MockItem.createHighQuality("Standard");
+    private final Item agedBrieWithHighestQuality = MockItem.createHighQuality("Aged Brie");
+    private final Item conjuredWithHighestQuality = MockItem.createHighQuality("Conjured Mana Cake");
+    private final Item backstageWithHighestQuality = MockItem.createHighQuality("Backstage passes to a TAFKAL80ETC concert");
 
     private final Item standardWithLowQuality = MockItem.createLowQuality("Standard");
     private final Item agedBrieWithLowQuality = MockItem.createLowQuality("Aged Brie");

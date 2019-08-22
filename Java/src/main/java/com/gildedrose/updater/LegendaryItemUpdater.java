@@ -1,7 +1,7 @@
 package com.gildedrose.updater;
 
 public abstract class LegendaryItemUpdater extends ItemUpdater{
-    static int HIGHEST_QUALITY = 80;
+    public static int HIGHEST_QUALITY = 80;
 
     public LegendaryItemUpdater() {
     }
